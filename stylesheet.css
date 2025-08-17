@@ -1,0 +1,38 @@
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* PCは3列 */
+  gap: 20px;
+  padding: 20px;
+}
+
+.post {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 15px;
+  transition: transform 0.2s;
+}
+
+.post:hover {
+  transform: translateY(-5px); /* ホバーで少し浮く */
+}
+
+.post img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* タブレット対応（2列） */
+@media (max-width: 900px) {
+  .blog-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* スマホ対応（1列） */
+@media (max-width: 600px) {
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+}
